@@ -33,5 +33,5 @@ Setup
 
  4. You can launch a locally installed tomcat with remote debugging enabled on port 8000 using:
 
-    apache-tomcat-6.0.35$ bin/catalina.sh jpda start
+        apache-tomcat-6.0.35$ bin/catalina.sh jpda start
 
