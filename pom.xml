@@ -57,6 +57,8 @@
             <artifactId>slf4j-api</artifactId>
         </dependency>
 
+
+        <!-- @todo find a way to reference public waffle jars. -->
         <dependency>
             <groupId>yadda</groupId>
             <artifactId>waffle-jna</artifactId>
@@ -71,6 +73,15 @@
             <scope>system</scope>
             <systemPath>${dir.waffle-jars}/waffle-tomcat6.jar</systemPath>
         </dependency>
+
+        <!-- NOTE: servlet-api only needed when remote debugging, and should probably be a 'provided' transitive dependency of waffle libs. -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
