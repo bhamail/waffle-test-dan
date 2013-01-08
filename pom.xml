@@ -15,7 +15,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dir.waffle-jars>${basedir}/3rd-lib/waffle1.5/Waffle/Bin/</dir.waffle-jars>
+        <!--<dir.waffle-jars>${basedir}/3rd-lib/waffle1.5/Waffle/Bin/</dir.waffle-jars>-->
 
         <shiro.version>1.2.1</shiro.version>
 
