@@ -16,6 +16,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <dir.waffle-jars>${basedir}/3rd-lib/waffle1.5/Waffle/Bin/</dir.waffle-jars>
+
+        <shiro.version>1.2.1</shiro.version>
+
     </properties>
 
     <dependencyManagement>
@@ -60,18 +63,22 @@
 
         <!-- @todo find a way to reference public waffle jars. -->
         <dependency>
-            <groupId>yadda</groupId>
+            <groupId>com.github.dblock.waffle</groupId>
             <artifactId>waffle-jna</artifactId>
             <version>1.5</version>
+<!--
             <scope>system</scope>
             <systemPath>${dir.waffle-jars}/waffle-jna.jar</systemPath>
+-->
         </dependency>
         <dependency>
-            <groupId>yadda</groupId>
+            <groupId>com.github.dblock.waffle</groupId>
             <artifactId>waffle-tomcat6</artifactId>
             <version>1.5</version>
+<!--
             <scope>system</scope>
             <systemPath>${dir.waffle-jars}/waffle-tomcat6.jar</systemPath>
+-->
         </dependency>
 
         <!-- NOTE: servlet-api only needed when remote debugging, and should probably be a 'provided' transitive dependency of waffle libs. -->
@@ -82,6 +89,19 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+
+<!--
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+-->
     </dependencies>
 
     <build>
